@@ -11,6 +11,7 @@ Shiv 2016
 import numpy as np
 import re
 import matplotlib as mpl
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 plt.rc('font', family='serif', size=12)
 # Read Column Names
@@ -56,6 +57,10 @@ for axis in ['top', 'bottom', 'left', 'right']:
     ax2.spines[axis].set_linewidth(3)
 ax2.xaxis.set_tick_params(width=2.5, length=7)
 ax2.yaxis.set_tick_params(width=2.5, length=7)
+avg_local_patch = mpatches.Patch(color='black', label='Total local energy')
+reference_patch = mpatches.Patch(color='firebrick', label='Reference energy')
+estimate_patch = mpatches.Patch(color='chartreuse', label='Best estimate energy')
+ax2.legend(handles=[avg_local_patch,reference_patch,estimate_patch],fontsize=12)
 plt.xlabel(r'$\tau$',fontsize=24)
 plt.ylabel(r'Energy (a.u.)',fontsize=24)
 plt.title(r'Imaginary time evolution of DMC energies', y=1.08, fontsize=24)
