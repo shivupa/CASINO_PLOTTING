@@ -4,9 +4,9 @@ Plot the dmc.hist file from a CASINO DMC job. Plot saved as SVG file.
 NOTE: Unlike the graphdmc function this script has no support for dmc.hist files
 without monotonically increasing lines
 
-Shiv 2016
 #Changes (Date DDMMYYYY,User,Change)
 09012016    Shiv    Initial Commit
+13012016    Shiv    Formatting
 """
 import numpy as np
 import re
@@ -26,7 +26,6 @@ with open("dmc.hist") as infile:
         line = infile.readline()
 dmc = np.loadtxt('dmc.hist', dtype=np.float_)
 # Plot
-# walkers plot
 walkers = dmc[:, data_items.index("NCONF")]
 fig = plt.figure(facecolor='white', figsize=(16, 9))
 ax = fig.add_subplot(211)
