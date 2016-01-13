@@ -1,7 +1,6 @@
-"""graphdmc.py
-Plot the dmc.hist file from a CASINO DMC job. Plot saved as SVG file.
+"""Plot the dmc.hist file from a CASINO DMC job. Save as SVG file.
 
-NOTE: Unlike the graphdmc function this script has no support for dmc.hist files
+NOTE: Unlike the graphdmc function this program has no support for dmc.hist files
 without monotonically increasing lines
 
 #Changes (Date DDMMYYYY,User,Change)
